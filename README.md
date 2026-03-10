@@ -1,80 +1,71 @@
 # 📊 Northwind Revenue Insights – H1 2006
 
-## 📌 Executive Summary
-This repository presents a **comprehensive quantitative analysis of Northwind Traders sales data** for the first half of 2006.  
-The goal is to uncover **sales performance trends, product concentration risks, and employee-level operational insights** using SQL and Power BI.  
+## 📌 Overview
+**SQL & Power BI-based quantitative analysis** of Northwind Traders sales data for the first half of 2006.  
 
-> **Data Acquisition & Processing:**  
-> Raw Northwind sales data (H1 2006) was extracted from SQL databases, transformed using structured queries, and modeled in Power BI for visualization.  
-> All steps prioritize **data integrity, reproducibility, and clarity of metrics**, enabling actionable business intelligence.
+The project uncovers **sales performance trends, product concentration risks, and employee-level operational insights**, providing actionable business intelligence for strategic decisions.  
 
----
-
-# 🧠 Analysis Framework
-
-## 📈 Sales Performance Metrics
-| Metric | Value |
-|--------|-------|
-| **Total Revenue** | $13M |
-| **Total Orders** | 48 |
-| **Total Customers** | 29 |
-| **Average Order Value (AOV)** | $268K |
-
-These KPIs form the baseline for assessing **overall business health** and identifying areas of improvement.
+Demonstrates **data extraction, transformation, visualization, and reproducible analysis workflows** for operational datasets.
 
 ---
 
-## 🔍 Key Insights
+## ⚙️ Workflow
 
-### 🥇 Top Products
-- **Northwind Traders Coffee**  
-- **Clam Chowder**  
-- **Chocolate**  
+### 1️⃣ System Recognition
+- **Domain:** Retail sales and operational performance analysis  
+- **Goal:** Identify top-performing products, categories, and employees; detect revenue concentration risks  
+- **Constraint:** Ensure reproducible analysis across raw SQL data and Power BI visualizations
 
-> These three products represent ~64% of total revenue, highlighting a **high product concentration risk** and emphasizing the need for diversification strategies.
+### 2️⃣ Data Collection
+- Source: **Northwind Traders H1 2006 sales database**  
+- Extract raw data via **SQL queries**  
+- Store datasets in `data/` for reproducibility
 
-### 📦 Category Performance
-- **Beverages** and **Seafood** generate the majority of revenue.  
-- Operational focus on **inventory optimization, marketing prioritization, and category-specific promotions** is recommended.
+### 3️⃣ Data Cleaning & Transformation
+- Standardize column names, data types, and formats  
+- Deduplicate records and ensure chronological integrity  
+- Aggregate data at **monthly, product, and employee levels**
 
-### 📅 Monthly Sales Trend
-- Sales peaked mid-semester and declined slightly by end of June.  
-- Suggests **potential seasonality or demand shifts**, warranting further trend and forecasting analysis.
+### 4️⃣ Exploratory Analysis
+- Compute **key performance indicators (KPIs)**: Total Revenue, Total Orders, Total Customers, Average Order Value  
+- Analyze **top products, categories, and employee contributions**  
+- Detect **high revenue concentration** and potential operational bottlenecks
 
-### 👩‍💼 Employee Contribution
-- Sales distribution varies significantly by employee.  
-- **Top-performing employees’ practices** could be standardized and replicated to improve overall team performance.
+### 5️⃣ Visualization
+- Build **Power BI dashboards** for interactive analysis  
+- Star schema model: **fact_sales** at center with dimensions for Products, Categories, Employees, Customers  
+
+**Power BI Model View:**  
+![Model View](power_bi/model_view.png)  
+
+**Dashboard Preview:**  
+![Dashboard Preview](power_bi/dashboard_preview.png)
+
+### 6️⃣ Insights
+- **Total Revenue:** $13M  
+- **Top Products Revenue Share:** ~64% concentrated in 3 products  
+- **Category Focus:** Beverages & Seafood dominate sales  
+- **Employee Impact:** Significant variation; top performers’ strategies could be standardized
+
+> The workflow ensures **scalable, reproducible, and actionable analysis** of sales data.
 
 ---
 
-# 🖼 Data Visualization & Dashboard
+## 🚀 Key Features
 
-### Power BI Model View
-![Power BI Dashboard](power_bi/model_view.png)
-
-### Power BI Dashboard Preview
-![Power BI Dashboard](power_bi/dashboard_preview.png)
-
-### Model Overview
-- Star schema model with **fact_sales** at the center and dimension tables for **Products, Categories, Employees, Customers**  
-- Enables fast, interactive exploration of metrics across time, products, and employee contributions.
+| Feature | Technique / Concept |
+|---------|-------------------|
+| Sales KPI Analysis | Total revenue, orders, customers, AOV |
+| Product & Category Insights | Revenue concentration, top-performing items |
+| Employee Contribution | Identify and replicate best practices |
+| Data Transformation | SQL queries for extraction & aggregation |
+| Interactive Visualization | Power BI dashboards and model view |
+| Reproducible Workflow | Structured scripts & dataset management |
 
 ---
 
-# ⚙️ Project Structure
-
-```bash
-northwind-sales-analysis/
-│
-├── sql/
-│   ├── northwind_queries.sql       # Data extraction & transformation queries
-│
-├── power_bi/
-│   ├── northwind_dashboard.pbix   # Interactive dashboard
-│   ├── dashboard_preview.png      # Dashboard screenshot
-│   ├── model_view.png             # Power BI data model visualization
-│
-├── data/
-│   ├── northwind_2006.sql         # Raw dataset
-│
-└── README.md
+## 🛠️ How to Run
+1. Place **raw Northwind H1 2006 SQL data** in the `data/` folder  
+2. Run **SQL queries** in `sql/northwind_queries.sql` for extraction and transformation  
+3. Open **Power BI dashboard** (`power_bi/northwind_dashboard.pbix`) for interactive analysis  
+4. Outputs include **cleaned datasets, KPIs, and visual dashboards**
