@@ -49,7 +49,7 @@ The analysis covers the full pipeline — from raw SQL extraction to interactive
 
 ## Dashboard Preview
 
-![Dashboard Overview](assets/dashboard_preview.png)
+![Dashboard Overview](power_bi/dashboard_preview.png)
 
 > *Interactive Power BI dashboard showing revenue by product, category, and employee for H1 2006.*
 
@@ -57,7 +57,7 @@ The analysis covers the full pipeline — from raw SQL extraction to interactive
 
 ## Data Model
 
-![Power BI Model View](assets/model_view.png)
+![Power BI Model View](power_bi/model_view.png)
 
 > *Star schema with `fact_sales` at the center connected to Products, Categories, Employees, and Customers dimensions.*
 
